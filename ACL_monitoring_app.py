@@ -7,7 +7,6 @@ import plotly.graph_objects as go
 import webbrowser
 import plotly.io as pio
 import os
-from matplotlib import pyplot as plt
 from scipy.signal import find_peaks
 from scipy import integrate
 from nptdms import TdmsFile
@@ -46,12 +45,7 @@ def CMJ_analysis(df):
     #Detect Jumps using instances of flights
     df["normal_fz"] = (df["total_fz"]-bodyweight)*-1  #Create column for total F minus BW, inverted
     flights, _ = find_peaks(df["normal_fz"], prominence=500, distance=5000)   #detect peaks
-   
-    #Ensure peaks are reasonable
-    plt.plot(flights, df["normal_fz"][flights], "xk"); plt.plot(df["normal_fz"]); plt.legend(['threshold'])
-    plt.title("Ensure Flights are reasonable - CMJ")
-    plt.show()
-    
+       
     #Identify start and end from detected peaks
     CMJ_start_list = []
     CMJ_end_list = []
