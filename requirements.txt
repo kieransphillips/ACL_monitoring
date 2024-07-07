@@ -1,3 +1,4 @@
 fpdf
 nptdms
 plotly
+scipy
