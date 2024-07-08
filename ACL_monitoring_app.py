@@ -13,7 +13,7 @@ from nptdms import TdmsFile
 from openpyxl import load_workbook
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
-
+import webbrowser
 
 
 
@@ -889,7 +889,7 @@ with right_column:
     
     open_excel = st.button("View Database", key='view_database')
     if open_excel:
-        os.startfile('C:/Users/kiera/OneDrive/Documents/School/Strength and Conditioning/Vikes Research/Forceplate Analysis/ACLR AthleteInfo Database.xlsx')
+        webbrowser.open(url)
          
     if st.button('Analyze New Jumps', key='analyze_new_jumps'):
         modal()
