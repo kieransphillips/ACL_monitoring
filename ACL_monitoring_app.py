@@ -7,7 +7,6 @@ import plotly.graph_objects as go
 import webbrowser
 import plotly.io as pio
 import os
-from matplotlib import pyplot as plt
 from scipy.signal import find_peaks
 from scipy import integrate
 from nptdms import TdmsFile
