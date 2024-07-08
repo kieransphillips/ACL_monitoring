@@ -7,8 +7,8 @@ import plotly.graph_objects as go
 import webbrowser
 import plotly.io as pio
 import os
+import scipy
 from scipy.signal import find_peaks
-from scipy import integrate
 from scipy.integrate import cumtrapz
 from nptdms import TdmsFile
 from openpyxl import load_workbook
