@@ -843,7 +843,8 @@ def barplot_jump_height (df, plot_title, unit, value_column):
 
 
 
-df = pd.read_excel('C:/Users/kiera/OneDrive/Documents/School/Strength and Conditioning/Vikes Research/Forceplate Analysis/ACLR AthleteInfo Database.xlsx', sheet_name='Sheet1')
+url = 'https://raw.githubusercontent.com/kieransphillips/ACL_monitoring/main/ACLR%20AthleteInfo%20Database.xlsx'
+df = pd.read_excel(url, sheet_name='Sheet1')
 
 #Streamlit dash
 st.set_page_config(layout="wide")
