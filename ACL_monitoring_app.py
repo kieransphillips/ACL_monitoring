@@ -7,9 +7,9 @@ import plotly.graph_objects as go
 import webbrowser
 import plotly.io as pio
 import os
-import scipy
+from matplotlib import pyplot as plt
 from scipy.signal import find_peaks
-from scipy.integrate import cumtrapz
+from scipy import integrate
 from nptdms import TdmsFile
 from openpyxl import load_workbook
 from datetime import datetime
