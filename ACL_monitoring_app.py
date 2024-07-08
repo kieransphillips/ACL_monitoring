@@ -9,6 +9,7 @@ import plotly.io as pio
 import os
 from scipy.signal import find_peaks
 from scipy import integrate
+from scipy.integrate import cumtrapz
 from nptdms import TdmsFile
 from openpyxl import load_workbook
 from datetime import datetime
