@@ -877,11 +877,11 @@ filtered_data = df[df["Athlete Name"] == f"{athlete_name}"]
 
 left_column, right_column = st.columns([4,1])
 with left_column:
-    
-    time_since_surgery = filtered_data['Time Since Surgery (months)'].max()
-    st.subheader(f'Athlete Name: {athlete_name}')
-    st.subheader(f"Time Since Surgery (Months): {time_since_surgery}")
-    st.write(f'{ACLR_limb} {graft_type} Graft')
+    if athlete_name:
+        time_since_surgery = filtered_data['Time Since Surgery (months)'].max()
+        st.subheader(f'Athlete Name: {athlete_name}')
+        st.subheader(f"Time Since Surgery (Months): {time_since_surgery}")
+        st.write(f'{ACLR_limb} {graft_type} Graft')
     
 
 with right_column:
