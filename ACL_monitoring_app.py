@@ -847,7 +847,11 @@ url = 'https://raw.githubusercontent.com/kieransphillips/ACL_monitoring/main/ACL
 df = pd.read_excel(url, sheet_name='Sheet1')
 
 #Streamlit dash
-st.set_page_config(layout="wide")
+st.set_page_config(
+        page_title="Vikes RTS Monitoring App",
+        page_icon="vikes_logo.jpg",
+        layout="wide",
+    )
 
 
 with st.sidebar:
@@ -880,8 +884,11 @@ with left_column:
     if athlete_name:
         time_since_surgery = filtered_data['Time Since Surgery (months)'].max()
         st.subheader(f'Athlete Name: {athlete_name}')
-        st.subheader(f"Time Since Surgery (Months): {time_since_surgery}")
+        st.write(f"Time Since Surgery (Months): {time_since_surgery}")
         st.write(f'{ACLR_limb} {graft_type} Graft')
+    else:
+        st.write('Select an Athlete or Analyze New Jumps')
+    
     
 
 with right_column:
